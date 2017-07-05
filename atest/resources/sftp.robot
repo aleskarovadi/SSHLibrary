@@ -8,7 +8,7 @@ ${FILE WITH NEWLINES NAME}       Test_newlines.txt
 ${FILE WITH NEWLINES}            ${LOCAL TEXTFILES}${/}${FILE WITH NEWLINES NAME}
 ${TEST FILE NAME}                test_file.txt
 ${TEST FILE}                     ${LOCAL TEXTFILES}${/}${TEST FILE NAME}
-${FILE WITH SPECIAL CHARS NAME}  special%2Fchars.txt
+${FILE WITH SPECIAL CHARS NAME}  special%2Fchars:3.txt
 ${FILE WITH SPECIAL CHARS}       ${LOCAL TEXTFILES}${/}${FILE WITH SPECIAL CHARS NAME}
 ${SUBDIRECTORY NAME}             aaääöö
 ${FILE WITH NON-ASCII NAME}      aaääöö.txt
