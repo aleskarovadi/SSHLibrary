@@ -8,13 +8,15 @@ ${FILE WITH NEWLINES NAME}       Test_newlines.txt
 ${FILE WITH NEWLINES}            ${LOCAL TEXTFILES}${/}${FILE WITH NEWLINES NAME}
 ${TEST FILE NAME}                test_file.txt
 ${TEST FILE}                     ${LOCAL TEXTFILES}${/}${TEST FILE NAME}
-${FILE WITH SPECIAL CHARS NAME}  special%2Fchars:3.txt
+${FILE WITH SPECIAL CHARS NAME}  special%2Fchars.txt
 ${FILE WITH SPECIAL CHARS}       ${LOCAL TEXTFILES}${/}${FILE WITH SPECIAL CHARS NAME}
 ${SUBDIRECTORY NAME}             aaääöö
 ${FILE WITH NON-ASCII NAME}      aaääöö.txt
 ${DIRECTORY WITH EMPTY SUBDIRECTORY}     contains_only_empty_subdir
 ${EMPTY SUB DIR}                 empty
 ${FILE WITH NON-ASCII}           ${LOCAL TEXTFILES}${/}${SUBDIRECTORY NAME}${/}${FILE WITH NON-ASCII NAME}
+${COLON CHAR FILE NAME}          special:char.txt
+${COLON CHAR FILE}               ${LOCAL TEXTFILES}${/}special:char.txt
 
 *** Keywords ***
 Login And Upload Test Files
