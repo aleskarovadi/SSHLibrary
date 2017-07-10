@@ -973,7 +973,7 @@ class AbstractSFTPClient(object):
         return sources
 
     def _get_put_file_destinations(self, sources, destination, path_separator):
-        destination = self._format_destination_path(destination, path_separator)
+        destination = self._format_destination_path(destination)
         if destination == '.':
             destination = self._homedir + '/'
         if len(sources) > 1 and destination[-1] != '/' and not self.is_dir(destination):
@@ -988,11 +988,12 @@ class AbstractSFTPClient(object):
                      for path in sources]
         return files, dir_path
 
-    def _format_destination_path(self, destination, path_separator):
-        colon_mark = ':' + path_separator
+    def _format_destination_path(self, destination):
+        destination = destination.replace('\\', '/')
+        colon_mark = ':/'
         if colon_mark in destination:
-            destination = path_separator + destination.split(colon_mark)[-1]
-        return destination.replace('\\', '/')
+            destination = '/' + destination.split(colon_mark)[-1]
+        return destination
 
     def _parse_path_elements(self, destination, path_separator):
         def _isabs(path):
